@@ -5,9 +5,9 @@
     --h1-color: #e5ff00;
     --gr-color: red;
     --gb-color: blue;
-    --bg-img: url('/img/bg02.jpg');
-    --model-img: url('/img/cyberman2.png');
-    --hair-img: url('/img/hair.png');
+    --bg-img: url('/public/img/bg02.jpg');
+    --model-img: url('/public/img/cyberman2.png');
+    --hair-img: url('/public/img/hair.png');
     --model-filter: drop-shadow(0 0 70px rgba(0, 0, 0, 1));
 }
 
