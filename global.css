@@ -119,20 +119,13 @@ body {
 h1 {
     position: absolute;
     bottom: 10rem;
-    margin-bottom: 5rem;
     display: flex;
-    flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
-    margin: 0;
-    padding-left: 3rem;
     width: 100%;
-    margin: 0;
-    padding: 0;
     font-family: var(--font-upheaval);
     font-size: 6rem;
     font-weight: lighter;
-    line-height: 0;
     text-transform: uppercase;
     color: var(--h1-color);
     mix-blend-mode: exclusion;
@@ -167,14 +160,30 @@ h1 {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
+    .banner {
+        width: 100%;
+        height: 100%;
+    }
+
     .banner .slider .item {
-        opacity: 20% !important;
+        position: absolute;
+        inset: 0 0 0 0;
+        transform:
+            rotateY(calc((var(--i) - 1) * (360deg / var(--q)) + 1deg)) translateZ(650px);
+    }
+    
+    .banner .slider .item img {
+        width: 50%;
+        height: auto;
+        aspect-ratio: 2/3;
+        object-fit: cover;
+        filter: opacity(80%) saturate(2) blur(1px);
+        border-radius: 10px;
     }
 
     h1 {
-        margin: 0;
-        padding-left: 0;
-        font-size: 4rem;
+        font-size: 4rem; /* Make the headline smaller for mobile */
+        bottom: 5rem; /* Adjust position */
     }
 }
