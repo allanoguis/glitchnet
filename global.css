@@ -27,7 +27,7 @@ body {
     background-color: black;
     background-size: contain;
     background-position: center;
-    backdrop-filter: invert(90%) blur(1px);
+    backdrop-filter: invert(90%) blur(2px);
     margin: 0;
 }
 
@@ -183,7 +183,7 @@ h1 {
     }
 
     h1 {
-        font-size: 4rem; /* Make the headline smaller for mobile */
-        bottom: 5rem; /* Adjust position */
+        font-size: 4rem; 
+        bottom: 5rem; 
     }
 }
