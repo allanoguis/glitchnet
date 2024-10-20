@@ -9,6 +9,7 @@
     --model-img: url('public/img/cyberman2.png');
     --hair-img: url('public/img/hair.png');
     --model-filter: drop-shadow(0 0 70px rgba(0, 0, 0, 1));
+    --footer-bg-color: rgba(0, 0, 0, 0.7);
 }
 
 * {
@@ -31,17 +32,31 @@ body {
     margin: 0;
 }
 
+p {
+    font-size: 1.7rem;
+}
+
 .footer {
     position: fixed;
     bottom: 0;
     display: flex;
     width: 100svw;
-    height: 50px;
-    background-color: black;
+    height: 8svh;
     justify-content: center;
     align-items: center;
     font-family: var(--font-upheaval);
     color: white;
+    z-index: 2;
+}
+
+.footerbg {
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    width: 100svw;
+    height: 8svh;
+    background-color: var(--footer-bg-color);
+    filter: blur(4px);
 }
 
 .banner {
@@ -83,8 +98,8 @@ body {
 }
 
 .banner .slider .item img {
-    width: calc(100% - 10px);
-    height: 100%;
+    width: 90%;
+    aspect-ratio: 2/3;
     object-fit: cover;
     filter: opacity(78%) saturate(1.27);
     border-radius: 10px;
@@ -166,6 +181,15 @@ h1 {
         height: 100%;
     }
 
+    .banner .slider {
+        position: absolute;
+        display: flex;
+        left: calc(50% - 50px);
+        transform-style: preserve-3d;
+        animation: autoRun 40s infinite linear;
+        z-index: 1;
+    }
+
     .banner .slider .item {
         position: absolute;
         inset: 0 0 0 0;
@@ -174,8 +198,8 @@ h1 {
     }
     
     .banner .slider .item img {
-        width: 50%;
-        height: auto;
+        width: auto;
+        height: 22svh;
         aspect-ratio: 2/3;
         object-fit: cover;
         filter: opacity(80%) saturate(2) blur(1px);
@@ -184,6 +208,10 @@ h1 {
 
     h1 {
         font-size: 4rem; 
-        bottom: 5rem; 
+        bottom: 13svh; 
+    }
+
+    p {
+        font-size: 1.2rem;
     }
 }
