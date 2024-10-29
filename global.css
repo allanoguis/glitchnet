@@ -45,18 +45,13 @@ p {
     justify-content: center;
     align-items: center;
     font-family: var(--font-upheaval);
+    background-color: var(--footer-bg-color);
     color: white;
     z-index: 2;
 }
 
-.footerbg {
-    position: fixed;
-    display: flex;
-    bottom: 0;
-    width: 100svw;
-    height: 8svh;
-    background-color: var(--footer-bg-color);
-    filter: blur(4px);
+.footer p {
+    font-size: 3vh;
 }
 
 .banner {
@@ -131,7 +126,7 @@ p {
     z-index: 2;
 }
 
-h1 {
+.h1 {
     position: absolute;
     bottom: 10rem;
     display: flex;
@@ -139,13 +134,13 @@ h1 {
     align-items: center;
     width: 100%;
     font-family: var(--font-upheaval);
-    font-size: 6rem;
+    font-size: 15vw;
     font-weight: lighter;
     text-transform: uppercase;
     color: var(--h1-color);
     mix-blend-mode: exclusion;
     z-index: 2;
-    animation: glitch 900ms ease infinite 2000ms alternate-reverse;
+    animation: glitch 900ms infinite 5000ms alternate-reverse;
 }
 
 h1 {
@@ -196,22 +191,17 @@ h1 {
         transform:
             rotateY(calc((var(--i) - 1) * (360deg / var(--q)) + 1deg)) translateZ(650px);
     }
-    
+
     .banner .slider .item img {
         width: auto;
         height: 22svh;
         aspect-ratio: 2/3;
         object-fit: cover;
-        filter: opacity(80%) saturate(2) blur(1px);
+        filter: opacity(30%) saturate(2) blur(1px);
         border-radius: 10px;
     }
 
-    h1 {
-        font-size: 4rem; 
-        bottom: 13svh; 
-    }
-
-    p {
-        font-size: 1.2rem;
+    .h1 {
+        bottom: 13svh;
     }
 }
